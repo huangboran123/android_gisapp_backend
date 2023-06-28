@@ -1,0 +1,39 @@
+spring:
+  ##???mysql
+  ##datasource:
+  ##driver-class-name: com.mysql.cj.jdbc.Driver
+  ##url: jdbc:mysql://rm-f8zac57xoqum5j7nx0o.mysql.rds.aliyuncs.com:3306/outofmemory?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+  ##username: huang_root
+  ##password: Hbr709498
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mobilegis?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 709498
+
+  redis:
+    host: localhost
+    port: 6379
+    ##password: hbr709498
+    database: 0
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+  servlet:
+    multipart:
+      enabled: true
+      ##Linux路径
+      ##location: /home/huang/outofmemory/resources/static/common/image_cache/
+      ##location: C:\outofmemory\resources\static\common\image_cache
+      max-file-size: 8000000
+server:
+  port: 8088
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
